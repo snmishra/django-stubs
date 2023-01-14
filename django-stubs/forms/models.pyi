@@ -31,8 +31,8 @@ ALL_FIELDS: Literal["__all__"]
 _Fields: TypeAlias = Union[_ListOrTuple[str], Literal["__all__"]]
 _Widgets: TypeAlias = dict[str, type[Widget] | Widget]
 
-_Labels: TypeAlias = dict[str, str]
-_HelpTexts: TypeAlias = dict[str, str]
+_Labels: TypeAlias = dict[str, _StrOrPromise]
+_HelpTexts: TypeAlias = dict[str, _StrOrPromise]
 _ErrorMessages: TypeAlias = dict[str, dict[str, str]]
 _FormFieldCallback: TypeAlias = Callable[[models.Field], Field]
 
